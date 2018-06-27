@@ -1,5 +1,8 @@
 package org.gillianbc.advancedrest;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import javax.inject.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -11,7 +14,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * Root resource (exposed at "myresource" path)
  */
-@Path("{something}/test")
+@Path("test")
 //@Singleton
 /*  By default, a new resource instance is created when it is requested.
  * The @Singleton overrides this so that only one instance of the resource is created
@@ -35,8 +38,7 @@ public class MyResource {
      */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getIt() {
-    	count++;
-        return "Got it!" + count + " param field was " + paramfield + " query field was " + queryfield;
+    public Date getIt() {
+        return Calendar.getInstance().getTime();
     }
 }
