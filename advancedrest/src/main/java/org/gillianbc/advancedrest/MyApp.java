@@ -3,6 +3,7 @@ package org.gillianbc.advancedrest;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.inject.Singleton;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 @ApplicationPath("webgbc")
@@ -19,9 +20,8 @@ public class MyApp extends Application{
  * */
 	
 	public Set<Class<?>> getClasses(){
-		System.out.println("OFF");
 		Set<Class<?>> resourceSet = new HashSet<Class<?>>();
-//		resourceSet.add(MyResource.class);
+		resourceSet.add(MyResource.class);
 		return resourceSet;
 	}
 }
