@@ -19,9 +19,9 @@ public class MyApp extends Application{
  *  For example, returning an empty set like this should switch all resources OFF
  * */
 	
-	public Set<Class<?>> getClasses(){
-		Set<Class<?>> resourceSet = new HashSet<Class<?>>();
-//		resourceSet.add(MyResource.class);
-		return resourceSet;
-	}
+//	public Set<Class<?>> getClasses(){
+//		Set<Class<?>> resourceSet = new HashSet<Class<?>>();
+////		resourceSet.add(MyResource.class);
+//		return resourceSet;
+//	}
 }
