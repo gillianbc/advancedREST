@@ -15,7 +15,10 @@ import javax.ws.rs.core.MediaType;
 //@Singleton
 /*  By default, a new resource instance is created when it is requested.
  * The @Singleton overrides this so that only one instance of the resource is created
- * (irrespective of no of browser windows).  Doesn't work with PathParam
+ * (irrespective of no of browser windows).  Doesn't work with PathParam and QueryParam
+ * as these are specific to the instance.  If you need singleton, then you need to use the
+ * PathParam and QueryParam as part of the method signature.  Singleton resources are 
+ * created before the request comes in i.e. when server started
  * */
 public class MyResource {
 	private int count;
