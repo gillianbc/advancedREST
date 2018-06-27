@@ -21,7 +21,7 @@ public class MyApp extends Application{
 	
 	public Set<Class<?>> getClasses(){
 		Set<Class<?>> resourceSet = new HashSet<Class<?>>();
-		resourceSet.add(MyResource.class);
+//		resourceSet.add(MyResource.class);
 		return resourceSet;
 	}
 }
