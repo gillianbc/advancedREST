@@ -1,18 +1,16 @@
-package org.gillianbc.advancedrest;
-
-import java.util.Calendar;
-import java.util.Date;
+package org.gillianbc.messenger;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 /**
  * Root resource (exposed at "myresource" path)
  */
-@Path("test")  //i.e. http://localhost:8080/advancedrest/webgbc/test
+@Path("myresource")
 public class MyResource {
-	
+
     /**
      * Method handling HTTP GET requests. The returned object will be sent
      * to the client as "text/plain" media type.
@@ -20,8 +18,8 @@ public class MyResource {
      * @return String that will be returned as a text/plain response.
      */
     @GET
-    @Produces("text/gilldate")  //my own custom media type - the name is arbitrary
-    public Date getIt() {
-        return Calendar.getInstance().getTime();
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getIt() {
+        return "Got it!";
     }
 }
