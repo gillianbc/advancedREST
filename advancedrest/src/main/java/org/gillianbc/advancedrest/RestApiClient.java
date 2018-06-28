@@ -56,8 +56,7 @@ public class RestApiClient {
 		System.out.println("\nNew Message " + message);
 		Response response = messagesTarget
 				.request()
-				.post(Entity
-				.json(message));
+				.post(Entity.json(message));
 		Message responseMessage = response.readEntity(Message.class);
 		return responseMessage;
 	}
